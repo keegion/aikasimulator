@@ -1,0 +1,115 @@
+
+.downArrow{
+    background:url("arrowdown.png");
+    cursor:pointer;
+    width: 45px;
+    height: 45px;
+    border: none;
+    }
+    
+.upArrow{
+    background:url("arrowup.png");
+    cursor:pointer;
+    width: 45px;
+    height: 45px;
+    border: none;
+    }
+.ddownArrow{
+    background:url("darrowdown.png");
+    cursor:pointer;
+    width: 45px;
+    height: 45px;
+    border: none;
+    }
+.dupArrow{
+    background:url("darrowup.png");
+    cursor:pointer;
+    width: 45px;
+    height: 45px;
+    border: none;
+    }
+.Menu { 
+    grid-area: menu; 
+    
+}
+.bottom { 
+    grid-area: bottom; 
+    
+}
+
+.S1 { grid-area: S1; }
+.S2 { grid-area: S2; }
+.S3 { grid-area: S3; }
+.S4 { grid-area: S4; }
+.S5 { grid-area: S5; }
+.S6 { grid-area: S6; }
+
+
+.grid-container {
+  margin: auto;
+  display: grid;
+  width: 1100px;
+  grid-template-columns: 200px auto;
+  grid-template-areas:
+    'menu S1 S1 S3 S3'
+    'menu S1 S1 S3 S3'
+    'menu S2 S2 S4 S4'
+    'menu S2 S2 S4 S4'
+    'menu S5 S5 S6 S6'
+    'menu S5 S5 S6 S6';
+  grid-gap: 2px;
+  background-color: #2196F3;
+  padding: 2px;
+}
+.grid-container > div {
+  background-color: rgb(204, 220, 243);
+  text-align: center;
+
+  font-size: 15px;
+}
+table {
+    
+    width: 100%; 
+    table-layout:fixed;
+}
+
+.colored {
+background-color: rgb(26, 98, 156);
+}
+table.fixed { table-layout:fixed; }
+table.fixed td { overflow: hidden; }
+
+#hintbox{
+    opacity: 0.95;
+    display:none;
+    position: absolute;
+    height: 450px;
+    width: 250px;
+    font-size: 12 px;
+    background-color: #161616;
+    color: #fff;
+    padding: 8px;
+    border-radius:5px;
+    text-align: left;
+    word-wrap: break-word;
+    
+  }      
+.red{
+    color: red;
+}
+.title{
+    font-size: 20px; 
+    color: grey;
+}
+.info{
+    color: rgb(190, 131, 75)
+}
+html{
+    height: 1300px;
+}
+.passive{
+    color: yellow;
+}
+
+
+
