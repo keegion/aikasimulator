@@ -75,6 +75,7 @@ table {
 
 .colored {
 background-color: rgb(26, 98, 156);
+font-family:Verdana;
 }
 table.fixed { table-layout:fixed; }
 table.fixed td { overflow: hidden; }
@@ -100,6 +101,7 @@ table.fixed td { overflow: hidden; }
 .title{
     font-size: 20px; 
     color: grey;
+    font-family:Courier New;
 }
 .info{
     color: rgb(190, 131, 75)
