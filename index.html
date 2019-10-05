@@ -14,10 +14,10 @@
 
     <title>Aika skill simulator</title>
     <script type="text/javascript" src="jscode.js"></script>
-    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="jquery-1.10.2.min.js"></script>
+    <link id="pagestyle" rel="stylesheet" type="text/css" href="style.css">
     <meta name="description" content="Aika Skill Simulator">
-    <meta name="keywords" content="Aika, Aika online, Skill Simulator, Skill Calculator" />
+    <meta name="keywords" content="Aika, Aika online, Skill Simulator, Skill Calculator, Aika skill simulator, aika skill calculator,aika simulador,skill simulador" />
 
 
 </head>
@@ -27,7 +27,7 @@
         <div class="Menu">
             <table>
                 <tr>
-                    <td class="colored" colspan="2">
+                    <td class="colored" colspan="2" style="border-radius: 50px 0px 0px 0px">
                         <h3>Class </h3>
                     </td>
                 </tr>
@@ -122,7 +122,7 @@
                                     <option value=47>47</option>
                                     <option value=48>48</option>
                                     <option value=49>49</option>
-                                    <option value=50>50</option>
+                                    <option selected="selected" value=50>50</option>
                                     <option value=51>51</option>
                                     <option value=52>52</option>
                                     <option value=53>53</option>
@@ -263,6 +263,64 @@
                 </tr>
                 </form>
             </table>
+            <br />
+            <table>    
+                    <td class="colored" colspan="4">
+                        <h3>Share your build</h3>
+                    </td>
+    
+                    </tr>
+                    <tr>
+                        <td colspan="4">
+                            <h2>
+                                </p>
+                            </h2>
+                        </td>
+                    </tr>
+                    <tr>
+                            <form>
+                            <td colspan="2">
+                                <button type="button" style="width:80px;" onclick="SaveDataToUrl()">Generate URL</button>
+                            </td>
+                            <td colspan="2">
+                                <button type="button" style="width:80px;" onclick="CopyTextToClipBoard()">Copy</button>
+                            </td>
+                    </tr>
+                    <tr>
+                        
+                            <td>
+                                <input id="UrlInput" type="text" style="width:180px;">
+                            </td>
+                        </tr>
+
+                    </form>
+                </table>
+                <table>
+                <tr>
+                    <td class="colored" colspan="2">
+                        <h3>Change Theme</h3>
+                    </td>
+                    
+                </tr> 
+            
+                <tr>
+                  
+                    <td>
+                            <br />
+                        <form>
+                            <select id="theme" style="width:93px;">
+                                <option value=style.css>Light</option>
+                                <option value=dark.css>Dark</option>
+
+                            </select>
+                    </td>
+                    <td>
+                            <br />
+                        <button type="button" onclick="changeTheme(theme.value)" style="width:65px;">Change</button>
+                    </td>
+                </tr>
+                </form>
+            </table>
            
         </div>
         <div id="hintbox"></div>
@@ -282,10 +340,10 @@
                 </tr>
                 <tr>
                     <td>
-                        <img id="skill1Img" src="">
+                        <img class="imgHover" nmbr="0" id="skill1Img" src="">
                     </td>
                     <td>
-                        <p id="skill1Description"></p>
+                        <p class="descHover" nmbr="0" id="skill1Description"></p>
                     </td>
                     <td>
                         <p id="skill1Points"></p>
@@ -293,6 +351,7 @@
                     <td>
                         <button class="ddownArrow" nmbr="0" onclick="DecreasePointsMin(0)"></button>
                     </td>
+                  
                     <td>
                         <button class="downArrow" nmbr="0" onclick="DecreasePoints(0)"></button>
                     </td>
@@ -305,10 +364,10 @@
                 </tr>
                 <tr>
                     <td>
-                        <img id="skill2Img" src="">
+                        <img class="imgHover" nmbr="1" id="skill2Img" src="">
                     </td>
                     <td>
-                        <p id="skill2Description"></p>
+                        <p class="descHover" nmbr="1" id="skill2Description"></p>
                     </td>
                     <td>
                         <p id="skill2Points"></p>
@@ -328,10 +387,10 @@
                 </tr>
                 <tr>
                     <td>
-                        <img id="skill3Img" src="">
+                        <img class="imgHover" nmbr="2" id="skill3Img" src="">
                     </td>
                     <td>
-                        <p id="skill3Description"></p>
+                        <p class="descHover" nmbr="2" id="skill3Description"></p>
                     </td>
                     <td>
                         <p id="skill3Points"></p>
@@ -351,10 +410,10 @@
                 </tr>
                 <tr>
                     <td>
-                        <img id="skill4Img" src="">
+                        <img class="imgHover" nmbr="3" id="skill4Img" src="">
                     </td>
                     <td>
-                        <p id="skill4Description"></p>
+                        <p class="descHover" nmbr="3" id="skill4Description"></p>
                     </td>
                     <td>
                         <p id="skill4Points"></p>
@@ -374,10 +433,10 @@
                 </tr>
                 <tr>
                     <td>
-                        <img id="skill5Img" src="">
+                        <img class="imgHover" nmbr="4" id="skill5Img" src="">
                     </td>
                     <td>
-                        <p id="skill5Description"></p>
+                        <p class="descHover" nmbr="4" id="skill5Description"></p>
                     </td>
                     <td>
                         <p id="skill5Points"></p>
@@ -397,10 +456,10 @@
                 </tr>
                 <tr>
                     <td>
-                        <img id="skill6Img" src="">
+                        <img class="imgHover" nmbr="5" id="skill6Img" src="">
                     </td>
                     <td>
-                        <p id="skill6Description"></p>
+                        <p class="descHover" nmbr="5" id="skill6Description"></p>
                     </td>
                     <td>
                         <p id="skill6Points"></p>
@@ -436,10 +495,10 @@
                 </tr>
                 <tr>
                         <td>
-                            <img id="skill13Img" src="">
+                            <img class="imgHover" nmbr="12" id="skill13Img" src="">
                         </td>
                         <td class="td1">
-                            <p id="skill13Description"></p>
+                            <p class="descHover" nmbr="12" id="skill13Description"></p>
                         </td>
                         <td>
                             <p id="skill13Points"></p>
@@ -459,10 +518,10 @@
                     </tr>
                     <tr>
                         <td>
-                            <img id="skill14Img" src="">
+                            <img class="imgHover" nmbr="13" id="skill14Img" src="">
                         </td>
                         <td>
-                            <p id="skill14Description"></p>
+                            <p class="descHover" nmbr="13" id="skill14Description"></p>
                         </td>
                         <td>
                             <p id="skill14Points"></p>
@@ -482,10 +541,10 @@
                     </tr>
                     <tr>
                         <td>
-                            <img id="skill15Img" src="">
+                            <img class="imgHover" nmbr="14" id="skill15Img" src="">
                         </td>
                         <td>
-                            <p id="skill15Description"></p>
+                            <p class="descHover" nmbr="14" id="skill15Description"></p>
                         </td>
                         <td>
                             <p id="skill15Points"></p>
@@ -505,10 +564,10 @@
                     </tr>
                     <tr>
                         <td>
-                            <img id="skill16Img" src="">
+                            <img class="imgHover" nmbr="15" id="skill16Img" src="">
                         </td>
                         <td>
-                            <p id="skill16Description"></p>
+                            <p class="descHover" nmbr="15" id="skill16Description"></p>
                         </td>
                         <td>
                             <p id="skill16Points"></p>
@@ -528,10 +587,10 @@
                     </tr>
                     <tr>
                         <td>
-                            <img id="skill17Img" src="">
+                            <img class="imgHover" nmbr="16" id="skill17Img" src="">
                         </td>
                         <td>
-                            <p id="skill17Description"></p>
+                            <p class="descHover" nmbr="16" id="skill17Description"></p>
                         </td>
                         <td>
                             <p id="skill17Points"></p>
@@ -551,10 +610,10 @@
                     </tr>
                     <tr>
                         <td>
-                            <img id="skill18Img" src="">
+                            <img class="imgHover" nmbr="17" id="skill18Img" src="">
                         </td>
                         <td>
-                            <p id="skill18Description"></p>
+                            <p class="descHover" nmbr="17" id="skill18Description"></p>
                         </td>
                         <td>
                             <p id="skill18Points"></p>
@@ -584,16 +643,16 @@
                 <col width="9px" />
                 <col width="9px" />
                 <tr>
-                    <td colspan="7" class="colored">
+                    <td colspan="7" class="colored" style="border-radius: 0px 50px 0px 0px">
                         <h3>Tier 2 Skills</h3>
                     </td>
                 </tr>
                 <tr>
                         <td>
-                            <img id="skill7Img" src="">
+                            <img class="imgHover" nmbr="6" id="skill7Img" src="">
                         </td>
                         <td>
-                            <p id="skill7Description"></p>
+                            <p class="descHover" nmbr="6" id="skill7Description"></p>
                         </td>
                         <td>
                             <p id="skill7Points"></p>
@@ -613,10 +672,10 @@
                     </tr>
                     <tr>
                         <td>
-                            <img id="skill8Img" src="">
+                            <img class="imgHover" nmbr="7" id="skill8Img" src="">
                         </td>
                         <td>
-                            <p id="skill8Description"></p>
+                            <p class="descHover" nmbr="7" id="skill8Description"></p>
                         </td>
                         <td>
                             <p id="skill8Points"></p>
@@ -636,10 +695,10 @@
                     </tr>
                     <tr>
                         <td>
-                            <img id="skill9Img" src="">
+                            <img class="imgHover" nmbr="8" id="skill9Img" src="">
                         </td>
                         <td>
-                            <p id="skill9Description"></p>
+                            <p class="descHover" nmbr="8" id="skill9Description"></p>
                         </td>
                         <td>
                             <p id="skill9Points"></p>
@@ -659,10 +718,10 @@
                     </tr>
                     <tr>
                         <td>
-                            <img id="skill10Img" src="">
+                            <img class="imgHover" nmbr="9" id="skill10Img" src="">
                         </td>
                         <td>
-                            <p id="skill10Description"></p>
+                            <p class="descHover" nmbr="9" id="skill10Description"></p>
                         </td>
                         <td>
                             <p id="skill10Points"></p>
@@ -682,10 +741,10 @@
                     </tr>
                     <tr>
                         <td>
-                            <img id="skill11Img" src="">
+                            <img class="imgHover" nmbr="10" id="skill11Img" src="">
                         </td>
                         <td>
-                            <p id="skill11Description"></p>
+                            <p class="descHover" nmbr="10" id="skill11Description"></p>
                         </td>
                         <td>
                             <p id="skill11Points"></p>
@@ -705,16 +764,16 @@
                     </tr>
                     <tr>
                         <td>
-                            <img id="skill12Img" src="">
+                            <img class="imgHover" nmbr="11" id="skill12Img" src="">
                         </td>
                         <td>
-                            <p id="skill12Description"></p>
+                            <p class="descHover" nmbr="11" id="skill12Description"></p>
                         </td>
                         <td>
                             <p id="skill12Points"></p>
                         </td>
                         <td>
-                            <button class="ddownArrow" nmbr="1" onclick="DecreasePointsMin(11)"></button>
+                            <button class="ddownArrow" nmbr="11" onclick="DecreasePointsMin(11)"></button>
                         </td>
                         <td>
                             <button class="downArrow" nmbr="11" onclick="DecreasePoints(11)"></button>
@@ -745,10 +804,10 @@
                 </tr>
                 <tr>
                     <td>
-                        <img id="skill19Img" src="">
+                        <img class="imgHover" nmbr="18" id="skill19Img" src="">
                     </td>
                     <td class="td1">
-                        <p id="skill19Description"></p>
+                        <p class="descHover" nmbr="18" id="skill19Description"></p>
                     </td>
                     <td>
                         <p id="skill19Points"></p>
@@ -768,10 +827,10 @@
                 </tr>
                 <tr>
                     <td>
-                        <img id="skill20Img" src="">
+                        <img class="imgHover" nmbr="19" id="skill20Img" src="">
                     </td>
                     <td>
-                        <p id="skill20Description"></p>
+                        <p class="descHover" nmbr="19" id="skill20Description"></p>
                     </td>
                     <td>
                         <p id="skill20Points"></p>
@@ -791,10 +850,10 @@
                 </tr>
                 <tr>
                     <td>
-                        <img id="skill21Img" src="">
+                        <img class="imgHover" nmbr="20" id="skill21Img" src="">
                     </td>
                     <td>
-                        <p id="skill21Description"></p>
+                        <p class="descHover" nmbr="20" id="skill21Description"></p>
                     </td>
                     <td>
                         <p id="skill21Points"></p>
@@ -814,10 +873,10 @@
                 </tr>
                 <tr>
                     <td>
-                        <img id="skill22Img" src="">
+                        <img class="imgHover" nmbr="21" id="skill22Img" src="">
                     </td>
                     <td>
-                        <p id="skill22Description"></p>
+                        <p class="descHover" nmbr="21" id="skill22Description"></p>
                     </td>
                     <td>
                         <p id="skill22Points"></p>
@@ -837,10 +896,10 @@
                 </tr>
                 <tr>
                     <td>
-                        <img id="skill23Img" src="">
+                        <img class="imgHover" nmbr="22" id="skill23Img" src="">
                     </td>
                     <td>
-                        <p id="skill23Description"></p>
+                        <p class="descHover" nmbr="22" id="skill23Description"></p>
                     </td>
                     <td>
                         <p id="skill23Points"></p>
@@ -860,10 +919,10 @@
                 </tr>
                 <tr>
                     <td>
-                        <img id="skill24Img" src="">
+                        <img class="imgHover" nmbr="23" id="skill24Img" src="">
                     </td>
                     <td>
-                        <p id="skill24Description"></p>
+                        <p class="descHover" nmbr="23" id="skill24Description"></p>
                     </td>
                     <td>
                         <p id="skill24Points"></p>
@@ -901,10 +960,10 @@
                 </tr>
                 <tr>
                     <td>
-                        <img id="skill25Img" src="">
+                        <img class="imgHover" nmbr="24" id="skill25Img" src="">
                     </td>
                     <td class="td1">
-                        <p id="skill25Description"></p>
+                        <p class="descHover" nmbr="24" id="skill25Description"></p>
                     </td>
                     <td>
                         <p id="skill25Points"></p>
@@ -924,10 +983,10 @@
                 </tr>
                 <tr>
                     <td>
-                        <img id="skill26Img" src="">
+                        <img class="imgHover" nmbr="25" id="skill26Img" src="">
                     </td>
                     <td>
-                        <p id="skill26Description"></p>
+                        <p class="descHover" nmbr="25" id="skill26Description"></p>
                     </td>
                     <td>
                         <p id="skill26Points"></p>
@@ -947,10 +1006,10 @@
                 </tr>
                 <tr>
                     <td>
-                        <img id="skill27Img" src="">
+                        <img class="imgHover" nmbr="26" id="skill27Img" src="">
                     </td>
                     <td>
-                        <p id="skill27Description"></p>
+                        <p class="descHover" nmbr="26" id="skill27Description"></p>
                     </td>
                     <td>
                         <p id="skill27Points"></p>
@@ -969,10 +1028,10 @@
                     </td>
                 </tr>
                 <td>
-                    <img id="skill28Img" src="">
+                    <img class="imgHover" nmbr="27" id="skill28Img" src="">
                 </td>
                 <td>
-                    <p id="skill28Description"></p>
+                    <p class="descHover" nmbr="27" id="skill28Description"></p>
                 </td>
                 <td>
                     <p id="skill28Points"></p>
@@ -991,10 +1050,10 @@
                 </td>
                 </tr>
                 <td>
-                    <img id="skill29Img" src="">
+                    <img class="imgHover" nmbr="28" id="skill29Img" src="">
                 </td>
                 <td>
-                    <p id="skill29Description"></p>
+                    <p class="descHover" nmbr="28" id="skill29Description"></p>
                 </td>
                 <td>
                     <p id="skill29Points"></p>
@@ -1013,10 +1072,10 @@
                 </td>
                 </tr>
                 <td>
-                    <img id="skill30Img" src="">
+                    <img class="imgHover" nmbr="29" id="skill30Img" src="">
                 </td>
                 <td>
-                    <p id="skill30Description"></p>
+                    <p class="descHover" nmbr="29" id="skill30Description"></p>
                 </td>
                 <td>
                     <p id="skill30Points"></p>
@@ -1034,10 +1093,7 @@
                     <button class="dupArrow" nmbr="29" onclick="IncreasePointsMax(29)"></button>
                 </td>
                 </tr>
-
-
             </table>
-
         </div>
 
         <div class="S6">
@@ -1056,10 +1112,10 @@
                 </tr>
                 <tr>
                     <td>
-                        <img id="skill31Img" src="">
+                        <img class="imgHover" nmbr="30" id="skill31Img" src="">
                     </td>
                     <td class="td1">
-                        <p id="skill31Description"></p>
+                        <p class="descHover" nmbr="30" id="skill31Description"></p>
                     </td>
                     <td>
                         <p id="skill31Points"></p>
@@ -1077,16 +1133,13 @@
                         <button class="dupArrow" nmbr="30" onclick="IncreasePointsMax(30)"></button>
                     </td>
                 </tr>
-
             </table>
-
         </div>
         
 
-
         <script>
-
-            LoadData();
+            setStyleFromCooking();
+            CheckIfURLHasData();
             $(function () {
                 $('#classSelect').val('Rifleman');
                 $('#levelSelect').val('50');
@@ -1095,19 +1148,17 @@
 
 
             $(document).ready(function () {
-                $('.downArrow,.upArrow,.dupArrow').mousemove(function (e) {
+                $('.downArrow,.upArrow,.dupArrow,.imgHover,.descHover').on('mousemove click' , function (e) {
                     if (popUPCheck($(this).attr('nmbr'), $(this).attr('class')))
                         $('#hintbox').html(popUP($(this).attr('nmbr'), $(this).attr('class'))).show();
                     $('#hintbox').css('top', e.clientY + 15).css('left', e.clientX + 15);
                 })
                     .mouseout(function () {
                         $('#hintbox').hide();
-                    });
+                    });           
             });
 
            
         </script>
-
 </body>
-
 </html>

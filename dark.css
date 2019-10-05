@@ -127,6 +127,7 @@ table.fixed td { overflow: hidden; }
 
 html{
     height: 1300px;
+    background-color: black;
 }
 
 .passive{
