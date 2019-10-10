@@ -67,15 +67,16 @@
     'menu S5 S5 S6 S6'
     'menu S5 S5 S6 S6';
   grid-gap: 2px;
-  background-color: white;
+  background-color: rgb(7, 82, 143);
   padding: 2px;
   border-radius: 50px 50px 50px 50px;
 }
 
 .grid-container > div {
-  background-color: rgb(204, 220, 243);
+  background-color: rgb(40, 40, 40);
   text-align: center;
   font-size: 15px;
+  font-weight: bold
 }
 
 table {
@@ -83,11 +84,11 @@ table {
     width: 100%; 
     table-layout:fixed;
     border-radius: 25px;
-   
+    border: 1px solid rgb(40, 40, 40);
 }
 
 .colored {
-    background-color: rgb(26, 98, 156);
+    background-color: rgb(3, 53, 95);
     font-family:Verdana;
 }
 
@@ -127,7 +128,8 @@ table.fixed td { overflow: hidden; }
 
 html{
     height: 1300px;
-    background-color: black;
+    color: rgb(73, 147, 243);
+    background-color: black
 }
 
 .passive{
@@ -135,11 +137,13 @@ html{
 }
 
 .notMaxedSkillPoint{
-    color: black;
+    color: rgb(30, 100, 200);
+    font-weight: normal;
 }
 
 .maxedSkillPoint{
-    color: lightcoral;
+    color: rgb(240, 80, 80);
+    font-weight: bold
 }
 
 .classIcon{
