@@ -429,7 +429,7 @@ function setCookie(cname,cvalue) {
   }
 
 var Warrior = {
-    skillDescription: ["Slash", "Charge", "Armor Break", "Taunt", "Berserk", "Blade Storm", "How of Glory", "Smash", "Focused Might", "Dragon Spirit", "How of Valor", "Earthquake", "Howl of Wrath", "Lionheart",
+    skillDescription: ["Slash", "Charge", "Armor Break", "Taunt", "Berserk", "Blade Storm", "Howl of Glory", "Smash", "Focused Might", "Dragon Spirit", "Howl of Valor", "Earthquake", "Howl of Wrath", "Lionheart",
         "Gash", "Howl of Fortitude", "Dragon Strike", "Shockwave", "Howl of Dread", "Battle inspiration", "Dragon Rage", "Deadly Charge", "Battle Instinct", "Master of Blades", "Blood Strike", "Howl of Freedom",
         "Howl of Blood", "Masochism", "Power Stark", "Brutal Edge", "Last Stand"],
     skillInfo: [["Strongly slays an enemy and inflicts 33 physical damage.",
