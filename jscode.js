@@ -395,7 +395,7 @@ function changeTheme(theme){
     setCookie("style",theme);
 }
 
-function setStyleFromCooking(){
+function setStyleFromCookie(){
     
     var theme = getCookie("style");
     console.log("theme : " + theme);
