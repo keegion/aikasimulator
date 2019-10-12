@@ -6,7 +6,7 @@
     width: 45px;
     height: 45px;
     border: none;
-    opacity: 0.9;
+  
 }
     
 .upArrow{
@@ -16,7 +16,7 @@
     width: 45px;
     height: 45px;
     border: none;
-    opacity: 0.9;
+  
 }
 
 .ddownArrow{
@@ -26,7 +26,7 @@
     width: 45px;
     height: 45px;
     border: none;
-    opacity: 0.9;
+ 
 }
 
 .dupArrow{
@@ -36,7 +36,7 @@
     width: 45px;
     height: 45px;
     border: none;
-    opacity: 0.9;
+
 }
 
 .Menu { 
