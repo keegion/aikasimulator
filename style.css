@@ -80,6 +80,7 @@
   background-color: rgb(204, 220, 243);
   text-align: center;
   font-size: 15px;
+  font-weight: bold
 }
 
 table {
@@ -91,7 +92,7 @@ table {
 }
 
 .colored {
-    background-color: rgb(26, 98, 156);
+    background-color: rgb(42, 73, 169);
     font-family:Verdana;
 }
 
@@ -131,6 +132,7 @@ table.fixed td { overflow: hidden; }
 
 html{
     height: 1300px;
+    background-image: url(simwallpaper.png);
 }
 
 .passive{
@@ -142,7 +144,8 @@ html{
 }
 
 .maxedSkillPoint{
-    color: lightcoral;
+    color: rgb(220, 0, 0);
+    font-weight: bold
 }
 
 .classIcon{
