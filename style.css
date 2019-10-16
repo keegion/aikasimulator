@@ -130,9 +130,10 @@ table.fixed td { overflow: hidden; }
     color: rgb(190, 131, 75)
 }
 
-html{
-    height: 1300px;
-    background-image: url(simwallpaper.png);
+body{
+
+    background-image: url(simwallpaper2.png);
+    background-size: 100% auto;
 }
 
 .passive{
