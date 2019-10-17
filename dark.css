@@ -129,11 +129,22 @@ table.fixed td { overflow: hidden; }
     color: rgb(190, 131, 75)
 }
 
-body{
+
+
+@media only screen and (min-width: 1800px) {
+    body {
+        background-image: url(simwallpaper2.png);
+    background-size: cover;
+    
+    }
+  }
+
+  .body{
+
     color: rgb(73, 147, 243);
-    background-image: url(simwallpaper2.png);
-    background-size: 100% auto;
-}
+
+  }
+
 .passive{
     color: yellow;
 }
